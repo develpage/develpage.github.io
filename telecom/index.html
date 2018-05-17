@@ -25,10 +25,14 @@
     <link rel="stylesheet" href="css/font-awesome.min.css">
     <script type="text/javascript" src="js/googleMap.js"></script>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCl7_xAOBw4iVvYjc2WQABqu_PdjebNp2k&callback=initMap" type="text/javascript"></script>
+
 </head>
 
 <body>
-
+	
+	<div class="loaderArea">
+   		<div class="loader"></div>
+	</div>
 
     <div class="fixed-menu">
         <nav class="navigation-panel">
@@ -358,6 +362,9 @@
         </div>
     </section>
     <section class="short-services-mobile">
+    	<div class="short-services-mobile-img">
+    		<img src="img/mobImg.jpg" class="img-responsive" alt="">
+    	</div>
         <div class="short-services-content-mobile up">
             <div class="short-services-up-name-wrapper">
                 <h1>логистика <br>и поставка материалов</h1>
@@ -554,15 +561,15 @@
                             <embed src="img/svg/2phone.svg" id="arrowDown">
                         </div>
                         <p>
-                            Тел: +7 (863) 201-28-91
-                            <br> Факс: +7 (863) 282-00-16
-                        </p>
+                            <a href="tel:+78632012891">Тел: +7 (863) 201-28-91</a>
+                            <br>
+                             Факс: +7 (863) 282-00-16</p>
                     </div>
                     <div class="contacts-adress mail">
                         <div class="ico">
                             <embed src="img/svg/3mail.svg" id="arrowDown">
                         </div>
-                        <a onClick="javascript:window.open('mailto:looter-987@yandex.ru', 'mail');event.preventDefault()" href="mailto:looter-987@yandex.ru" target="_self"> ts@tserv.su</a>
+                        <a onClick="javascript:window.open('mailto:ts@tserv.su', 'mail');event.preventDefault()" href="mailto:ts@tserv.su" target="_self"> ts@tserv.su</a>
                     </div>
                 </div>
             </div>
@@ -582,6 +589,14 @@
 
     -->
     <script src="js/scripts.min.js"></script>
+    <script>
+	  $(window).on('load', function () {
+	    $preloader = $('.loaderArea'),
+	      $loader = $preloader.find('.loader');
+	    $loader.fadeOut();
+	    $preloader.delay(350).fadeOut('slow');
+	  });
+	</script>
     <script src="js/anchor.js"></script>
     <script src="js/ScrollMagic.min.js"></script>
     <script src="js/debug.addIndicators.min.js"></script>

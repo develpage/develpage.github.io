@@ -1,10 +1,24 @@
-
 $(function() {
 
     new WOW().init();
 
 });
 
+/*var h = $(window).height();
+console.log(h);*/
+
+window.onload = function() {
+    var objUl = document.querySelectorAll('.list');
+    for (var i = 0; i < objUl.length; i++) {
+        var objLi = objUl[i].querySelectorAll('li');
+        if ($(window).height() <= 700) {
+            var lastItem = objLi[objLi.length - 1];
+            lastItem.style.display = 'none';
+        } 
+
+
+    }
+};
 
 
 $(document).ready(function() {
@@ -26,18 +40,18 @@ $(document).ready(function() {
 
     var controller = new ScrollMagic.Controller();
 
-// Change menu Item Color *******************************************************************
-   
+    // Change menu Item Color *******************************************************************
 
-function colorMenu(){ 
-	var res;
-    if ($(window).width() < 576) {
-    	res = $(".slider-content-wrapper").height() + $(".short-services-mobile").height();
-} else {
-	res = $('.slider-content-wrapper').height();
-}
-return res;
-};
+
+    function colorMenu() {
+        var res;
+        if ($(window).width() < 576) {
+            res = $(".slider-content-wrapper").height() + $(".short-services-mobile").height();
+        } else {
+            res = $('.slider-content-wrapper').height();
+        }
+        return res;
+    };
 
 
     var changeColorMenu = new ScrollMagic.Scene({
@@ -67,27 +81,27 @@ return res;
         .setClassToggle('.burger-item', 'changeColor')
         //.addIndicators()
         .addTo(controller);
-	
+
 
     //Bacground Scene ***************************************************
 
     var headScene1 = new ScrollMagic.Scene({
             triggerElement: '.header-content',
-            offset: 400,
+            offset: 100,
             triggerHook: 0
         })
-        .setClassToggle('.bg-initial', 'fade-out')
-        // .addIndicators()
+        .setClassToggle('.bg-initial', 'disNone')
+        //.addIndicators()
         .addTo(controller);
 
 
     var headScene2 = new ScrollMagic.Scene({
             triggerElement: '.header-content',
-            offset: 400,
+            offset: 580,
             triggerHook: 0
         })
         .setClassToggle('.bg1', 'fade-out')
-        //  .addIndicators()
+        //.addIndicators()
         .addTo(controller);
 
 
@@ -97,7 +111,7 @@ return res;
             triggerHook: 0
         })
         .setClassToggle('.header-content', 'fade-out')
-        //  .addIndicators()
+        // .addIndicators()
         .addTo(controller);
 
     var headSceneContactsFade = new ScrollMagic.Scene({
@@ -106,14 +120,14 @@ return res;
             triggerHook: 0
         })
         .setClassToggle('.header-contacts', 'fade-out')
-        //  .addIndicators()
+        //.addIndicators()
         .addTo(controller);
 
 
     var bg2InScene = new ScrollMagic.Scene({
             triggerElement: '.header-content',
-            offset: 400,
-            duration: '100%',
+            offset: 380,
+            duration: '120%',
             triggerHook: 0
         })
         .setClassToggle('.bg2', 'fade-in')
@@ -147,21 +161,21 @@ return res;
 
     //Slider Pin Effect************************************************************
 
-function windowHeight(){ 
-	var res;
-    if ($(window).height() < 700) {
-    	res = $(".slider-section").height()*7.5;
-} else {
-	res = $(".slider-section").height()*5;
-}
-return res;
-};
+    /*   function windowHeight() {
+           var res;
+           if ($(window).height() < 700) {
+               res = $(".slider-section").height() * 6.5;
+           } else {
+               res = $(".slider-section").height() * 5;
+           }
+           return res;
+       };*/
 
 
     var pinIntroScene = new ScrollMagic.Scene({
             triggerElement: '.slider-section',
             triggerHook: 0,
-            duration: windowHeight()
+            duration: $(".slider-section").height() * 5
         })
         .setPin('.slider-section')
         //.addIndicators()
@@ -252,37 +266,37 @@ return res;
 
     var SliderContentScene1 = new ScrollMagic.Scene({
             triggerElement: '.slider-section',
-            offset: 1200,
+            offset: $(window).height() * 1.25,
             triggerHook: "onLeave"
         })
         .setClassToggle('.cont1', 'fade-out')
-        // .addIndicators()
+        //.addIndicators()
         .addTo(contentOpacity);
 
     var SliderContentScene2 = new ScrollMagic.Scene({
             triggerElement: '.slider-section',
-            offset: 1300,
+            offset: $(window).height() * 1.35,
             duration: "120%",
             triggerHook: "onLeave"
         })
         .setClassToggle('.cont2', 'fade-in')
-        // .addIndicators()
+        //.addIndicators()
         .addTo(contentOpacity);
 
 
     var SliderContentScene3 = new ScrollMagic.Scene({
             triggerElement: '.slider-section',
-            offset: 2520,
+            offset: $(window).height() * 2.65,
             duration: "120%",
             triggerHook: "onLeave"
         })
         .setClassToggle('.cont3', 'fade-in')
-        // .addIndicators()
+        //.addIndicators()
         .addTo(contentOpacity);
 
     var SliderContentScene4 = new ScrollMagic.Scene({
             triggerElement: '.slider-section',
-            offset: 3700,
+            offset: $(window).height() * 3.95,
             triggerHook: "onLeave"
         })
         .setClassToggle('.cont4', 'fade-in')
