@@ -1,3 +1,7 @@
+
+
+
+
 $(function() {
 
     new WOW().init();
@@ -187,22 +191,43 @@ $(document).ready(function() {
     //slider right bg img************************************************************
 
 
-    var slider = new ScrollMagic.Controller();
+ var slider = new ScrollMagic.Controller();
 
     var sliderRight1 = new ScrollMagic.Scene({
             triggerElement: '.slider-section',
             triggerHook: "onLeave",
-            offset: 400,
+            offset: $(window).height(),
             duration: "100%"
         })
         .setTween(TweenMax.from('.s-bg2', 1, { y: '100%', ease: Linear.easeNone }))
-        //     .addIndicators()
+        //.addIndicators()
         .addTo(slider);
+
+
+
+
+/*var tlCurtain = new TimelineMax();
+    .from('.s-bg2', 1, { y: '100%', ease: Linear.easeNone });
+
+// 2. Curtain Scene
+var scene = new ScrollScene({
+	triggerElement: ".slider-section",
+	triggerHook: "onLeave",
+    offset: $(window).height(),
+    duration: "100%"
+})
+    .addTo(controller)
+    .setTween(tlCurtain);
+
+*/
+
+
+
 
     var sliderRight2 = new ScrollMagic.Scene({
             triggerElement: '.slider-section',
             triggerHook: "onLeave",
-            offset: 1600,
+            offset: $(window).height()*2,
             duration: "100%"
         })
         .setTween(TweenMax.from('.s-bg3', 1, { y: '100%', ease: Linear.easeNone }))
@@ -212,7 +237,7 @@ $(document).ready(function() {
     var sliderRight3 = new ScrollMagic.Scene({
             triggerElement: '.slider-section',
             triggerHook: "onLeave",
-            offset: 2800,
+            offset: $(window).height()*3,
             duration: "100%"
         })
         .setTween(TweenMax.from('.s-bg4', 1, { y: '100%', ease: Linear.easeNone }))
@@ -229,7 +254,7 @@ $(document).ready(function() {
     var sliderTop1 = new ScrollMagic.Scene({
             triggerElement: '.slider-section',
             triggerHook: "onLeave",
-            offset: 400,
+            offset: $(window).height(),
             duration: "100%"
         })
         .setTween(TweenMax.from('.st-bg2', 1, { x: '100%', ease: Linear.easeNone }))
@@ -239,7 +264,7 @@ $(document).ready(function() {
     var sliderTop2 = new ScrollMagic.Scene({
             triggerElement: '.slider-section',
             triggerHook: "onLeave",
-            offset: 1600,
+            offset: $(window).height()*2,
             duration: "100%"
         })
         .setTween(TweenMax.from('.st-bg3', 1, { x: '100%', ease: Linear.easeNone }))
@@ -249,7 +274,7 @@ $(document).ready(function() {
     var sliderTop3 = new ScrollMagic.Scene({
             triggerElement: '.slider-section',
             triggerHook: "onLeave",
-            offset: 2800,
+            offset: $(window).height()*3,
             duration: "100%"
         })
         .setTween(TweenMax.from('.st-bg4', 1, { x: '100%', ease: Linear.easeNone }))
@@ -279,7 +304,7 @@ function sliderCon() {
 
     var SliderContentSceneSlide2 = new ScrollMagic.Scene({
             triggerElement: '.slider-section',
-            offset: $(window).height() * 1.35,
+            offset: $(window).height(),
             triggerHook: "onLeave"
         })
         .setTween(TweenMax.from('.cont2', 0.1, { y: '50%', ease:Linear.easeNone }))
@@ -289,7 +314,7 @@ function sliderCon() {
 
     var SliderContentSceneSlide3 = new ScrollMagic.Scene({
             triggerElement: '.slider-section',
-            offset: $(window).height() * 2.65,
+            offset: $(window).height() * 2,
             triggerHook: "onLeave"
         })
         .setTween(TweenMax.from('.cont3', 0.1, { y: '100%', ease:Linear.easeNone }))
@@ -299,7 +324,7 @@ function sliderCon() {
 
     var SliderContentSceneSlide4 = new ScrollMagic.Scene({
             triggerElement: '.slider-section',
-            offset: $(window).height() * 3.95,
+            offset: $(window).height() * 3,
             triggerHook: "onLeave"
         })
         .setTween(TweenMax.from('.cont4', 0.1, { y: '100%', ease:Linear.easeNone }))
@@ -317,7 +342,7 @@ function sliderCon() {
 
 	    var SliderContentScene1 = new ScrollMagic.Scene({
 	            triggerElement: '.slider-section',
-	            offset: $(window).height() * 1.25,
+	            offset: $(window).height()*2,
 	            triggerHook: "onLeave"
 	        })
 	        .setClassToggle('.cont1', 'fade-out')
@@ -326,8 +351,8 @@ function sliderCon() {
 
 	    var SliderContentScene2 = new ScrollMagic.Scene({
 	            triggerElement: '.slider-section',
-	            offset: $(window).height() * 1.35,
-	            duration: "120%",
+	            offset: $(window).height()*2,
+	            duration: "100%",
 	            triggerHook: "onLeave"
 	        })
 	        .setClassToggle('.cont2', 'fade-in')
@@ -337,8 +362,8 @@ function sliderCon() {
 
 	    var SliderContentScene3 = new ScrollMagic.Scene({
 	            triggerElement: '.slider-section',
-	            offset: $(window).height() * 2.65,
-	            duration: "120%",
+	            offset: $(window).height() * 3,
+	            duration: "100%",
 	            triggerHook: "onLeave"
 	        })
 	        .setClassToggle('.cont3', 'fade-in')
@@ -347,7 +372,7 @@ function sliderCon() {
 
 	    var SliderContentScene4 = new ScrollMagic.Scene({
 	            triggerElement: '.slider-section',
-	            offset: $(window).height() * 3.95,
+	            offset: $(window).height() * 4,
 	            triggerHook: "onLeave"
 	        })
 	        .setClassToggle('.cont4', 'fade-in')
@@ -368,17 +393,17 @@ sliderCon();
 
     var SliderNameScene1 = new ScrollMagic.Scene({
             triggerElement: '.slider-section',
-            offset: 1200,
+            offset: $(window).height()*2,
             triggerHook: "onLeave"
         })
         .setClassToggle('.slider-build', 'fade-out')
-        // .addIndicators()
+        //.addIndicators()
         .addTo(nameOpacity);
 
     var SliderNameScene2 = new ScrollMagic.Scene({
             triggerElement: '.slider-section',
-            offset: 1300,
-            duration: "120%",
+            offset: $(window).height()*2,
+            duration: "100%",
             triggerHook: "onLeave"
         })
         .setClassToggle('.slider-project', 'fade-in')
@@ -388,8 +413,8 @@ sliderCon();
 
     var SliderNameScene3 = new ScrollMagic.Scene({
             triggerElement: '.slider-section',
-            offset: 2520,
-            duration: "120%",
+            offset: $(window).height()*3,
+            duration: "100%",
             triggerHook: "onLeave"
         })
         .setClassToggle('.slider-injer', 'fade-in')
@@ -398,11 +423,11 @@ sliderCon();
 
     var SliderNameScene4 = new ScrollMagic.Scene({
             triggerElement: '.slider-section',
-            offset: 3700,
+            offset: $(window).height()*4,
             triggerHook: "onLeave"
         })
         .setClassToggle('.slider-service', 'fade-in')
-        // .addIndicators()
+         //.addIndicators()
         .addTo(contentOpacity);
 
 
@@ -413,17 +438,17 @@ sliderCon();
 
     var sliderLineScene1 = new ScrollMagic.Scene({
             triggerElement: '.slider-section',
-            duration: "130%",
+            duration: "100%",
             triggerHook: "onLeave"
         })
         .setClassToggle('.slider-green-line', 'slider-green-line-animated')
-        // .addIndicators()
+        //.addIndicators()
         .addTo(sliderLine);
 
     var sliderLineScene2 = new ScrollMagic.Scene({
             triggerElement: '.slider-section',
-            offset: 1325,
-            duration: "110%",
+            offset: $(window).height()*2,
+            duration: "100%",
             triggerHook: "onLeave"
         })
         .setClassToggle('.slider-green-line', 'slider-green-line-animated')
@@ -432,8 +457,8 @@ sliderCon();
 
     var sliderLineScene3 = new ScrollMagic.Scene({
             triggerElement: '.slider-section',
-            offset: 2525,
-            duration: "120%",
+            offset: $(window).height()*3,
+            duration: "100%",
             triggerHook: "onLeave"
         })
         .setClassToggle('.slider-green-line', 'slider-green-line-animated')
@@ -442,7 +467,7 @@ sliderCon();
 
     var sliderLineScene4 = new ScrollMagic.Scene({
             triggerElement: '.slider-section',
-            offset: 3750,
+            offset: $(window).height()*4,
             triggerHook: "onLeave"
         })
         .setClassToggle('.slider-green-line', 'slider-green-line-animated')
@@ -455,7 +480,7 @@ sliderCon();
 
     var sliderLineScene1 = new ScrollMagic.Scene({
             triggerElement: '.slider-section',
-            duration: "130%",
+            duration: "100%",
             triggerHook: "onLeave"
         })
         .setClassToggle('.lw1', 'active')
@@ -464,8 +489,8 @@ sliderCon();
 
     var sliderLineScene2 = new ScrollMagic.Scene({
             triggerElement: '.slider-section',
-            offset: 1325,
-            duration: "110%",
+            offset: $(window).height()*2,
+            duration: "100%",
             triggerHook: "onLeave"
         })
         .setClassToggle('.lw2', 'active')
@@ -474,8 +499,8 @@ sliderCon();
 
     var sliderLineScene3 = new ScrollMagic.Scene({
             triggerElement: '.slider-section',
-            offset: 2525,
-            duration: "120%",
+            offset: $(window).height()*3,
+            duration: "100%",
             triggerHook: "onLeave"
         })
         .setClassToggle('.lw3', 'active')
@@ -484,7 +509,7 @@ sliderCon();
 
     var sliderLineScene4 = new ScrollMagic.Scene({
             triggerElement: '.slider-section',
-            offset: 3750,
+            offset: $(window).height()*4,
             triggerHook: "onLeave"
         })
         .setClassToggle('.lw4', 'active')
@@ -541,8 +566,8 @@ sliderCon();
 
     var bg3InScene = new ScrollMagic.Scene({
             triggerElement: '.short-services',
-            offset: -1100,
-            duration: '540%',
+            offset: -$(window).height(),
+            duration: '450%',
             triggerHook: 0
         })
         .setClassToggle('.bg3', 'display')
@@ -552,8 +577,8 @@ sliderCon();
 
     var bg3ParallaxSceneIn = new ScrollMagic.Scene({
             triggerElement: '.short-services',
-            offset: -1100,
-            duration: '150%',
+            offset: -$(window).height(),
+            duration: '100%',
             triggerHook: 0
         })
         .setTween(TweenMax.from('.short-services', 0.1, { y: '100%', ease: Linear.easeNone }))
@@ -563,8 +588,8 @@ sliderCon();
 
     var bg3ParallaxSceneOut = new ScrollMagic.Scene({
             triggerElement: '.short-services',
-            offset: 2200,
-            duration: '150%',
+            offset: $(window).height()*2,
+            duration: '100%',
             triggerHook: 0
         })
         .setTween(TweenMax.to('.short-services', 0.1, { y: '-110%', ease: Linear.easeNone }))
@@ -573,7 +598,7 @@ sliderCon();
 
     var shortServBG = new ScrollMagic.Scene({
             triggerElement: '.short-services',
-            duration: '300%',
+            duration: '200%',
             triggerHook: 0
         })
         .setPin('.short-services')
@@ -582,7 +607,7 @@ sliderCon();
 
     var shortServBGParallax = new ScrollMagic.Scene({
             triggerElement: '.short-services',
-            offset: 500,
+            offset: $(window).height()/2,
             duration: '150%',
             triggerHook: 0
         })
@@ -594,7 +619,7 @@ sliderCon();
 
     var shortServicesLeft = new ScrollMagic.Scene({
             triggerElement: '.short-services',
-            offset: 1100,
+            offset: $(window).height(),
 
             triggerHook: 0
         })
@@ -606,7 +631,7 @@ sliderCon();
 
     var shortServicesRight = new ScrollMagic.Scene({
             triggerElement: '.short-services',
-            offset: 1300,
+            offset: $(window).height(),
 
             triggerHook: 0
         })

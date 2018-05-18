@@ -25,6 +25,9 @@
     <link rel="stylesheet" href="css/font-awesome.min.css">
     <script type="text/javascript" src="js/googleMap.js"></script>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCl7_xAOBw4iVvYjc2WQABqu_PdjebNp2k&callback=initMap" type="text/javascript"></script>
+
+
+    <link rel="stylesheet" href="css/onepage-scroll.css">
 </head>
 
 <body>
@@ -69,7 +72,7 @@
     <div class="scroll-bg bg3"></div>
     <div class="scroll-bg bg4"></div>
     <div class="scroll-bg bg5"></div>
-    <header name="home" id="home">
+    <header class="scroll" name="home" id="home">
         <div class="header-bgi">
             <div class="logo"><a href="#home"></a>
                 <embed src="img/svg/logoInvert.svg" id="logoSvgInvert">
@@ -95,7 +98,7 @@
                 <br> E-mail: ts@tserv.su</p>
         </div>
     </header>
-    <section class="about-section" name="about" id="about">
+    <section class="about-section scroll" name="about" id="about">
         <div class="about-company">
             <div class="about-company-content">
                 <h1>о компании</h1>
@@ -135,7 +138,7 @@
             </div>
         </div>
     </section>
-    <section class="slider-section" name="services" id="services">
+    <section class="slider-section scroll" name="services" id="services">
         <div class="slider-wrapper">
             <div class="slider-left">
                 <div class="slider-left-content">
@@ -554,6 +557,13 @@
 
     -->
     <script src="js/scripts.min.js"></script>
+<script type="text/javascript">
+    
+        if (screen.width > 480) document.write('<script type="text/javascript" src="js/scrollSpeed.js" ></sc' + 'ript>',
+            '<script type="text/javascript" src="js/wow.min.js" ></sc' + 'ript>'
+        );
+    
+    </script>
     <script>
     $(window).on('load', function() {
         $preloader = $('.loaderArea'),
@@ -566,15 +576,10 @@
     <script src="js/ScrollMagic.min.js"></script>
     <script src="js/debug.addIndicators.min.js"></script>
     <script src="js/TweenMax.min.js"></script>
+    <script src="js/TimelineMax.min.js"></script>
     <script src="js/animation.gsap.min.js"></script>
     <script src="js/ScrollToPlugin.min.js"></script>
-    <script type="text/javascript">
     
-        if (screen.width > 480) document.write('<script type="text/javascript" src="js/scrollSpeed.js" ></sc' + 'ript>',
-            '<script type="text/javascript" src="js/wow.min.js" ></sc' + 'ript>'
-        );
-    
-    </script>
 </body>
 
 </html>
