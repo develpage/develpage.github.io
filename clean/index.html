@@ -28,6 +28,18 @@
         background-color: #fff;
     }
     </style>
+        <script>
+    $(document).ready(function() {
+        $('#output').val($('#range').val());
+        $('#range').onChange(function() {
+            $('#output').val($('#range').val());
+        });
+
+        $('#output').change(function() {
+            $('#range').val($('#output').val());
+        });
+    });
+    </script>
 </head>
 
 <body>
@@ -285,26 +297,8 @@
 
     });
     </script>
-    <script>
-    $(document).ready(function() {
-        $('#output').val($('#range').val());
-        $('#range').mousemove(function() {
-            $('#output').val($('#range').val());
-        });
 
-        $('#output').change(function() {
-            $('#range').val($('#output').val());
-        });
-    })
-    </script>
-<script>
-var result, elements = document.getElementsByClass('room-size-range');
-for(var i = 0; i < elements.length; i++) {
-  if(elements[i].getAttribute('type') == 'range')
-    result = elements[i].value;
-};
-alert(result);
-</script>
+
 </body>
 
 </html>
