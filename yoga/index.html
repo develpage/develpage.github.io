@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+   <!-- <base href="/"> -->
+    <title>Иойга-Центр</title>
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <!-- Template Basic Images Start -->
+    <meta property="og:image" content="path/to/image.jpg">
+    <link rel="icon" href="img/favicon/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon-180x180.png">
+    <!-- Template Basic Images End -->
+    <!-- Custom Browsers Color Start -->
+    <meta name="theme-color" content="#000">
+    <!-- Custom Browsers Color End -->
+    <link rel="stylesheet" href="css/main.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <script src="libs/jquery/dist/jquery.min.js"></script>
+     <script type="text/javascript" src="js/wow.min.js"></script>
+    <script src="scroll/jquery.mCustomScrollbar.concat.min.js"></script>
+    <link rel="stylesheet" href="scroll/jquery.mCustomScrollbar.css" />
+    <link rel="stylesheet" href="css/jquery.fancybox.min.css" />
+    <script src="js/jquery.fancybox.min.js"></script>
+    <script>
+    new WOW().init();
+    </script>
+    <script>
+    (function($) {
+        $(window).on("load", function() {
+            $(".content").mCustomScrollbar();
+        });
+    })(jQuery);
+    </script>
+    <script type="text/javascript">
+    $(document).ready(function() {
+
+        var Menu = {
+
+            el: {
+                ham: $('.menu'),
+                menuTop: $('.menu-top'),
+                menuMiddle: $('.menu-middle'),
+                menuBottom: $('.menu-bottom'),
+                menu: $('.nav-humb'),
+                linkA: $('.nav-link-humb')
+            },
+
+            init: function() {
+                Menu.bindUIactions();
+            },
+
+            bindUIactions: function() {
+                Menu.el.ham
+                    .on(
+                        'click',
+                        function(event) {
+                            Menu.activateMenu(event);
+                            event.preventDefault();
+                        }
+                    );
+            },
+
+
+            activateMenu: function() {
+                Menu.el.menuTop.toggleClass('menu-top-click');
+                Menu.el.menuMiddle.toggleClass('menu-middle-click');
+                Menu.el.menuBottom.toggleClass('menu-bottom-click');
+                Menu.el.menu.fadeToggle();
+
+
+                $('.nav-link-humb').on('click', function() {
+                    Menu.el.menuTop.removeClass('menu-top-click');
+                    Menu.el.menuMiddle.removeClass('menu-middle-click');
+                    Menu.el.menuBottom.removeClass('menu-bottom-click');
+                    Menu.el.menu.css('display', 'none');
+
+                });
+
+            }
+
+
+        };
+        Menu.init();
+
+    });
+    </script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCl7_xAOBw4iVvYjc2WQABqu_PdjebNp2k&callback=initMap" type="text/javascript"></script>
+    <script type="text/javascript" src="js/googleMap.js"></script>
+   
+</head>
+
+<body>
+    <nav class="container-fluid nav-container">
+        <div class="row">
+            <div class="col-lg-3 col mt-3 logo">
+                <img src="img/logo.png" width="60px" alt=""><span class="ml-2 company-name align-middle">Мантра</span></div>
+            <div class="menu col-md-1 justify-content-end align-self-center" id="touch-menu">
+                <span class="menu-global menu-top"></span>
+                <span class="menu-global menu-middle"></span>
+                <span class="menu-global menu-bottom"></span>
+            </div>
+            <div class="w-100 br"></div>
+            <div class="col nav-panel">
+                <ul class="nav justify-content-end clearfix">
+                    <li class="nav-item"><a href="#about" class="nav-link">о студии</a></li>
+                    <li class="nav-item"><a href="#class" class="nav-link">классы</a></li>
+                    <li class="nav-item"><a href="#teacher" class="nav-link">преподаватели</a></li>
+                    <li class="nav-item"><a href="#price" class="nav-link">цены</a></li>
+                    <li class="nav-item"><a href="#gall" class="nav-link">галерея</a></li>
+                    <li class="nav-item"><a href="#contacts" class="nav-link">контакты</a></li>
+                </ul>
+            </div>
+            <div class="col nav-humb">
+                <ul class="nav justify-content-end clearfix">
+                    <li class="nav-item"><a href="#about" class="nav-link-humb">о студии</a></li>
+                    <li class="nav-item"><a href="#class" class="nav-link-humb">классы</a></li>
+                    <li class="nav-item"><a href="#teacher" class="nav-link-humb">преподаватели</a></li>
+                    <li class="nav-item"><a href="#price" class="nav-link-humb">цены</a></li>
+                    <li class="nav-item"><a href="#gall" class="nav-link-humb">галерея</a></li>
+                    <li class="nav-item"><a href="#contacts" class="nav-link-humb">контакты</a></li>
+                </ul>
+            </div>
+    </nav>
+    <header class="container-fluid d-flex align-items-end p-0 wow fadeIn" id="header">
+        <video class="wow fadeIn" width="100%" height="auto" autoplay="autoplay" preload="auto" tabindex="0">
+            <source src="video/yoga.mp4" type="video/mp4">
+            <source src="video/yoga.webm" type="video/webm">
+            <source src="video/yoga.ogv" type="video/ogg" />
+        </video>
+        <div class="container">
+            <div class="row">
+                <div class="col header-quote">
+                    <h2 class="wow fadeIn" data-wow-delay="1s">Практикуйте и всё придёт</h2>
+                    <span class="wow fadeIn" data-wow-delay="0.5s">Патабхи Джойс</span>
+                </div>
+                <div class="small-display-header col">
+                    <img src="img/logo.png" alt="">
+                    <span class="ml-2 company-name align-middle">Мантра</span>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section class="container" name="about" id="about">
+        <div class="row">
+            <div class="col">
+                <div class="about-us-content wow fadeInUp">
+                    <h2>О студии</h2>
+                    <p>Хорошо оборудованный, просторный и современный зал для занятий, профессиональные преподаватели, и вкусный горячий чай после тренировки позволит Вам почувствовать себя комфортно и уютно, как дома. И не важно, занимаетесь ли вы рано утром перед рабочим днём или посещаете вечерние тренировки, нужно всегда помнить, что занятия йогой это не только красивое тело, а ещё и хорошее настроение, спокойствие ума, и конечно же бодрость духа! Приходя к нам в гости, вы можете смело ожидать самых приятных впечатлений и хорошего настроения. Мы делаем занятия йогой не просто спортом, а образом жизни в гармонии и согласии — прежде всего с самим собой! Мы постараемся поделиться с вами не только профессионализмом и знаниями, но и самым ценным, что у нас есть- позитивной энергией. Мы хотим предоставить каждому новые возможности и собрать вместе всех позитивных целеустремленных людей, потому что мы знаем — обмен позитивной энергией способствует ее стремительному росту.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="container">
+        <div class="row no-gutters">
+            <div class="col-md-4 col-sm-12 wow fadeInLeft">
+                <div class="about-block-1">
+                    <div class="card h-100 p-4 border-0 rounded-0 align-items-center justify-content-center">
+                        <h2 class="cadr-title"><span>о наших</span><br>преподавателях</h2>
+                        <p class="card-text">Данный сертификационный курс проводят опытные преподаватели, мастера йоги с многолетним опытом преподавания и практики.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-8 col-sm-12 wow fadeInRight" data-wow-delay="0.3s">
+                
+                    <div class="about-block-2 card border-0 h-100">
+                        <div class="d-flex justify-content-end align-items-end" style="background-image: url(img/techer.jpg);" alt="Преподаватель">
+                            <h2 class="card-title mr-2 mb-4">преподаватель<br><span>Иванова Анастасия</span></h2>
+                        </div>
+                    </div>
+                
+            </div>
+        </div>
+        
+        <div class="row	no-gutters">
+            <div class="col-md-4 wow fadeInRight">
+                <div class="about-block-3">
+                    <div class="card h-100 p-4 border-0 rounded-0 align-items-center justify-content-center">
+                        <h2 class="cadr-title"><span>наша</span><br>практика</h2>
+                        <p class="card-text">Особенностью использования асан в Кундалини йоге является их сочетание с динамическими элементами, а также, зачастую, интенсивными дыхательными техниками.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-8 order-sm-first wow fadeInLeft" data-wow-delay="0.3s">
+                
+                    <div class="about-block-4 card border-0">
+                        <div class="d-flex justify-content-end align-items-end" style="background-image: url(img/yoga_girls.jpg);" alt="Преподаватель"></div>
+                    </div>
+                
+            </div>
+        </div>
+        
+        <div class="row	no-gutters">
+            <div class="col-md-4 wow fadeInLeft">
+                <div class="about-block-5">
+                    <div class="card h-100 border-0 rounded-0 align-items-center justify-content-center">
+                        <img src="img/4.jpg" alt="Цветочек" class="card-img rounded-0">
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-8 wow fadeInRight" data-wow-delay="0.3s">
+                
+                    <div class="about-block-6 card border-0">
+                        <div class="d-flex justify-content-end align-items-end" style="background-image: url(img/beach_yoga.jpg);" alt="Преподаватель">
+                            <h2 class="card-title  mr-2 mb-4">преподаватель<br><span>Иванова Анастасия</span></h2>
+                        </div>
+                    </div>
+               
+            </div>
+        </div>
+        
+        <div class="row	no-gutters">
+            <div class="col-md-4 wow fadeInLeft">
+                <div class="about-block-7">
+                    <div class="card h-100 p-4 border-0 rounded-0 align-items-center justify-content-center">
+                        <h2 class="cadr-title"><span>йога</span><br>как стиль жизни</h2>
+                        <p class="card-text">То, как люди видят вас, – их карма, то, как вы реагируете – ваша
+                            <br>
+                            <br>Уэйн Дайер</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-8 wow fadeInRight" data-wow-delay="0.3s">
+                
+                    <div class="about-block-8 card border-0 rounded-0 p-4 h-100">
+                        <h2 class="card-title">выбери подходящее время</h2>
+                        <p class="card-text">На нашем сайте вы можете подобрать для себя подходящее время тренировки посетив раздел с расписанием занятий.
+                        </p>
+                    </div>
+                
+            </div>
+        </div>
+        
+    </section>
+    <section class="container">
+        <div class="row">
+            <div class="col-sm-12 col-md-4 about-short wow fadeInUp">
+                <div class="card justify-content-center align-items-center border-0">
+                    <div class="icon-about d-flex justify-content-center align-items-center">
+                        <img src="img/1.png" alt="">
+                    </div>
+                    <h3 class="card-title">опытные преподаватели</h3>
+                    <p class="card-text">Данный сертификационный курс проводят опытные преподаватели, мастера йоги с многолетним опытом преподавания и практики. Обучение на курсе сбалансировано так, что ежедневно вы будете слушать лекции и заниматься практикой, так что с собой необходимо приносить форму для занятий и все для записи лекций.</p>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-4 about-short wow fadeInUp" data-wow-delay="0.3s">
+                <div class="card justify-content-center align-items-center border-0">
+                    <div class="icon-about d-flex justify-content-center align-items-center">
+                        <img src="img/2.png" alt=""></div>
+                    <h3 class="card-title">удобное расписание</h3>
+                    <p class="card-text">Данный сертификационный курс проводят опытные преподаватели, мастера йоги с многолетним опытом преподавания и практики. Обучение на курсе сбалансировано так, что ежедневно вы будете слушать лекции и заниматься практикой, так что с собой необходимо приносить форму для занятий и все для записи лекций.</p>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-4  about-short wow fadeInUp" data-wow-delay="0.6s">
+                <div class="card justify-content-center align-items-center border-0">
+                    <div class="icon-about d-flex justify-content-center align-items-center">
+                        <img src="img/3.png" alt="">
+                    </div>
+                    <h3 class="card-title">современный зал</h3>
+                    <p class="card-text">Данный сертификационный курс проводят опытные преподаватели, мастера йоги с многолетним опытом преподавания и практики. Обучение на курсе сбалансировано так, что ежедневно вы будете слушать лекции и заниматься практикой, так что с собой необходимо приносить форму для занятий и все для записи лекций.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="container-fluid qoute-body p-0" name="class" id="class">
+        <div class="row m-0">
+            <h2 class="col-sm-12">Наши классы</h2>
+            <div class="container d-flex align-items-center justify-content-center">
+                <div class="row">
+                    <div class="col-sm-12 col-md-4 p-1 wow fadeIn">
+                        <div class="classes p-1 pt-4">
+                            <h3>Занятия для начинающих</h3>
+                            <p>
+                                Преподаватели, готовясь к занятию, составляют отдельный тренировочный алгоритм, наилучшим образом отражающий день сегодняшний. Поэтому вы можете побывать на совершенно разных по настроению и нагрузке занятиях у одного и того же преподавателя. Именно отсутствие повторяющихся схем и прочей тренировочной рутины делают занятия у нас в студии по-настоящему интересными и наполненными.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-4 p-1 wow fadeIn" data-wow-delay="0.2s">
+                        <div class="classes p-1 pt-4">
+                            <h3>Групповые занятия</h3>
+                            <p>
+                                Все групповые тренировки в нашей студии строятся на базе доступного для большинства практикующих материала. Сюда входят асаны начального и среднего уровня сложности. Регулярная практика на базе базового тренировочного материала решает задачи развития и укрепления мышечного корсета позвоночника, глубоких мышц, поддерживающих внутренние органы, мышечно-сухожильных комплексов, а также оптимизации работы нервной и эндокринной систем.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-4 p-1 wow fadeIn" data-wow-delay="0.4s">
+                        <div class="classes p-1 pt-4">
+                            <h3>Йога для беременных</h3>
+                            <p>
+                                Для практики йоги во время беременности используются специальные позы и дыхание в них. Они призваны, в череде естественных физиологических изменений в теле женщины, оказывать необходимую ей поддержку. Укрепить и стабилизировать мышцы, поддерживающие позвоночник. Поддержать и укрепить мышцы живота, - работая с центром. Расширить, и освободить от напряжения грудную клетку. Укрепить мышцы поясничного отдела позвоночника.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-4 p-1 wow fadeIn" data-wow-delay="0.1s">
+                        <div class="classes p-1 pt-4">
+                            <h3>Хатха-йога</h3>
+                            <p>
+                                Все гимнастические техники, применяемые в тренировочном процессе, по сути своей являются хатха-йогой. В основе тренировочных алгоритмов хатха-йоги, лежит система физических упражнений, состоящая из асан — («положение тела», «поза», «форма»). Корректная работа в асанах запускает процессы, оптимизирующие функционирование опорно-двигательного аппарата, нервной и эндокринной систем и, как следствие, комплексное совершенствование тела и сознания.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-4 p-1 wow fadeIn" data-wow-delay="0.3s">
+                        <div class="classes p-1 pt-4">
+                            <h3>Даосские практики</h3>
+                            <p>
+                                Школа традиционного китайского ушу и цигун «Уданпай» проводит регулярные занятия даосскими практиками, на которых мы будем рады видеть как опытных занимающихся, так и тех, кто хотел бы нчать свое знакомство с китайской оздоровительной культурой.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-4 p-1 wow fadeIn" data-wow-delay="0.5s">
+                        <div class="classes p-1 pt-4">
+                            <h3>Персональные тренировки</h3>
+                            <p>
+                                В нашей студии вы можете составить официальное персональную программу. Возможна разработка целевых программ и проведение в соответствии с ними семейных, корпоративных и любых других видов тренировок.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+    <section class="container mb-5" name="teacher" id="teacher">
+        <div class="row trainers-block">
+            <div class="w-100 d-flex justify-content-center mb-5">
+                <h2>Преподаватели</h2>
+            </div>
+            <div class="col-sm-12 col-md-4 d-flex flex-column align-items-center trainers wow fadeInUp">
+                <div class="trainer-content" style="background-image: url(img/tren2.jpg)">
+                    <div class="trainer trainer-info d-flex align-items-center">
+                        Медик по образованию и отличный учитель. Помимо базового уровня хатха-йоги, она ведет и оздоровительный утренний класс, где занимаются в том числе и те, кто пострадал от спорта или неправильной практики йоги.
+                    </div>
+                </div>
+                <div class="trainer-name">
+                    <h3>Алексеева Людмила</h3>
+                    <p>тренер</p>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-4 d-flex flex-column align-items-center trainers wow fadeInUp" data-wow-delay="0.3s">
+                <div class="trainer-content" style="background-image: url(img/tren1.jpg)">
+                    <div class="trainer trainer-info d-flex align-items-center">
+                        Медик по образованию и отличный учитель. Помимо базового уровня хатха-йоги, она ведет и оздоровительный утренний класс, где занимаются в том числе и те, кто пострадал от спорта или неправильной практики йоги.
+                    </div>
+                </div>
+                <div class="trainer-name">
+                    <h3>Евсеев Вадим</h3>
+                    <p>тренер</p>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-4 d-flex flex-column align-items-center trainers wow fadeInUp" data-wow-delay="0.6s">
+                <div class="trainer-content" style="background-image: url(img/tren3.jpg)">
+                    <div class="trainer trainer-info d-flex align-items-center">
+                        Медик по образованию и отличный учитель. Помимо базового уровня хатха-йоги, она ведет и оздоровительный утренний класс, где занимаются в том числе и те, кто пострадал от спорта или неправильной практики йоги.
+                    </div>
+                </div>
+                <div class="trainer-name">
+                    <h3>Новикова Алена</h3>
+                    <p>тренер</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="container-fliud price-container p-0" name="price" id="price">
+        <div class="row">
+            <h2 class="col-12">Цены на занятия</h2>
+            <div class="container">
+                <div class="row">
+                    <div class="price col-sm-12 col-md-4 p-1 d-flex flex-column align-items-center wow fadeInUp">
+                        <div>
+                            <h3>Разовое посещение</h3>
+                            <h2><span>&#8381; </span>500</h2>
+                            <p>С помощью восточных практик сегодня многие восстанавливают здоровье, справляются со стрессом и поддерживают гармонию души и тела. Но некоторые, не зная, как правильно заниматься йогой, не спешат осваивать техники. Хотя даже простые асаны могут принести огромную пользу и развить силу воли.</p>
+                        </div>
+                    </div>
+                    <div class="price col-sm-12 col-md-4 p-1 d-flex flex-column align-items-center wow fadeInUp" data-wow-delay="0.3s">
+                        <div>
+                            <h3>Абонемент на 6 месяцев</h3>
+                            <h2><span>&#8381; </span>5000</h2>
+                            <p>С помощью восточных практик сегодня многие восстанавливают здоровье, справляются со стрессом и поддерживают гармонию души и тела. Но некоторые, не зная, как правильно заниматься йогой, не спешат осваивать техники. Хотя даже простые асаны могут принести огромную пользу и развить силу воли.</p>
+                        </div>
+                    </div>
+                    <div class="price col-sm-12 col-md-4 p-1 d-flex flex-column align-items-center wow fadeInUp" data-wow-delay="0.6s">
+                        <div>
+                            <h3>Абонемент на 12 месяцев</h3>
+                            <h2><span>&#8381; </span>9000</h2>
+                            <p>С помощью восточных практик сегодня многие восстанавливают здоровье, справляются со стрессом и поддерживают гармонию души и тела. Но некоторые, не зная, как правильно заниматься йогой, не спешат осваивать техники. Хотя даже простые асаны могут принести огромную пользу и развить силу воли.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="container-fluid p-0 gallery-container" name="gall" id="gall">
+        <div class="row no-gutters">
+            <h2 class="col-12">Галерея</h2>
+            <div class="img-container col-lg-4 col wow fadeIn"><a data-fancybox="gallery" href="img/gal1.jpg"><img src="img/gal1.jpg" alt="" class="img-fluid"></a></div>
+            <div class="img-container col-lg-4 col wow fadeIn" data-wow-delay="0.2s"><a data-fancybox="gallery" href="img/gal2.jpg"><img src="img/gal2.jpg" alt="" class="img-fluid"></a></div>
+            <div class="img-container col-lg-4 col wow fadeIn" data-wow-delay="0.4s"><a data-fancybox="gallery" href="img/gal3.jpg"><img src="img/gal3.jpg" alt="" class="img-fluid"></a></div>
+            <div class="img-container col-lg-4 col wow fadeIn" data-wow-delay="0.3s"><a data-fancybox="gallery" href="img/gal4.jpg"><img src="img/gal4.jpg" alt="" class="img-fluid"></a></div>
+            <div class="img-container col-lg-4 col wow fadeIn" data-wow-delay="0.5s"><a data-fancybox="gallery" href="img/gal8.jpg"><img src="img/gal8.jpg" alt="" class="img-fluid"></a></div>
+            <div class="img-container col-lg-4 col wow fadeIn" data-wow-delay="0.7s"><a data-fancybox="gallery" href="img/gal6.jpg"><img src="img/gal6.jpg" alt="" class="img-fluid"></a></div>
+        </div>
+    </section>
+    <section class="container-fluid form-submit">
+        <h2>Подписка на новости</h2>
+        <div class="row d-flex justify-content-center">
+            <form action="" class="form-inline d-flex justify-content-center">
+                <div class="form-group name">
+                    <input type="text" class="form-control mb-2 mr-sm-2 mb-sm-0 br0  border-0" id="inlineFormInput" onchange="onChangeInput()" placeholder="">
+                    <label class="sr-only label" for="inlineFormInput">Ваше имя</label>
+                </div>
+                <div class="form-group email">
+                    <input type="email" class="form-control mb-2 mr-sm-2 mb-sm-0 br0 border-0" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="">
+                    <label class="label" for="exampleInputEmail1">Ваш Email</label>
+                </div>
+                <div class="btn-submit">
+                    <button type="submit" class="btn btn-primary mb-2 mr-sm-2 mb-sm-0 br0 border-0">Подписаться</button>
+                </div>
+            </form>
+        </div>
+    </section>
+    <section class="container-fluid">
+        <div class="row">
+            <div id="map" class="map w-100"></div>
+        </div>
+    </section>
+    <footer class="container-fluid" name="contacts" id="contacts">
+        <div class="row">
+            <div class="col footer-logo-content d-flex flex-column justify-content-between align-items-center">
+                <div class="footer-logo d-flex flex-column justify-content-center align-items-center">
+                    <img src="img/logo.png" alt="Логотип Мантра">
+                    <h4>студия йоги</h4>
+                    <h2>Мантра</h2>
+                    <p>город Ростов-на-Дону
+                        <br>ул. Советская, 3а
+                        <br>+7 (863) 333-33-33</p>
+                </div>
+                <div class="copyright">
+                    <p>© 2016 студия йоги мантра</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="js/scripts.min.js"></script>
+</body>
+
+</html>
