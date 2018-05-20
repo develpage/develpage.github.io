@@ -15,8 +15,8 @@
     <script src="libs/swiper/dist/js/swiper.min.js"></script>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCl7_xAOBw4iVvYjc2WQABqu_PdjebNp2k&callback=initMap" type="text/javascript"></script>
     
-    <script type="text/javascript" src="libs/jquery/dist/jquery.min.js"></script>
-    <script src="js/calc.js"></script>
+
+   
     <script type="text/javascript" src="js/googleMap.js"></script>
     <style>
     body {
@@ -28,8 +28,8 @@
         background-color: #fff;
     }
     </style>
-        <script>
-    $(document).ready(function() {
+            <script>
+  /*  $(document).ready(function() {
         $('#output').val($('#range').val());
         $('#range').onChange(function() {
             $('#output').val($('#range').val());
@@ -38,8 +38,19 @@
         $('#output').change(function() {
             $('#range').val($('#output').val());
         });
-    });
+    }); */
+    $(document).ready(function() {
+        var el;
+        $("#range").change(function() {
+        el = $(this);
+        el
+        .next("#output")
+        .text(el.val());
+        })
+        .trigger('change');
+        });
     </script>
+
 </head>
 
 <body>
@@ -210,8 +221,9 @@
                 </div>
                 <div class="room-size">
                     <h4>Выберете размер помещения</h4>
-                    <span><output class="room-size-range-summ" id="output"></output>кв.м</span>
-                    <input class="room-size-range" onmousemove="refresh()" id="range" type="range" min="0" max="200" step="2" value="0">
+                   
+                    <input class="room-size-range" oninput="refresh()" id="range" type="range" min="0" max="200" step="2" value="0">
+                     <output class="room-size-range-summ" id="output" for="range"></output><span>кв.м</span>
                 </div>
                 <div class="add-services">
                     <h4>Выберите дополнительные услуги</h4>
@@ -297,7 +309,7 @@
 
     });
     </script>
-
+ <script src="js/calc.js"></script>
 
 </body>
 
