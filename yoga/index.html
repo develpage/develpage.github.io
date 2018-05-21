@@ -91,7 +91,9 @@
     </script>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCl7_xAOBw4iVvYjc2WQABqu_PdjebNp2k&callback=initMap" type="text/javascript"></script>
     <script type="text/javascript" src="js/googleMap.js"></script>
-   
+   <script>
+            document.getElementById('vid').play();
+    </script>
 </head>
 
 <body>
@@ -127,7 +129,7 @@
             </div>
     </nav>
     <header class="container-fluid d-flex align-items-end p-0 wow fadeIn" id="header">
-        <video class="wow fadeIn" width="100%" height="auto" autoplay="autoplay" preload="auto" tabindex="0">
+        <video id="vid" class="wow fadeIn" width="100%" autoplay="autoplay" loop="loop" preload="auto" tabindex="0" muted>
             <source src="video/yoga.mp4" type="video/mp4">
             <source src="video/yoga.webm" type="video/webm">
             <source src="video/yoga.ogv" type="video/ogg" />
