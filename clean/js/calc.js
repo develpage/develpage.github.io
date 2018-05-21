@@ -57,7 +57,6 @@ function refresh() {
 
 };
 
-refresh(); 
 
 /*document.getElementById('range').onchange = function refresh() {
 
