@@ -59,22 +59,22 @@
 
 
 <!-- Form -->
-                    <form action="">
+                    <form id="payment-form" action="">
                         <div class="card-wrapper">
 <!-- Card holder front side -->
                             <div class="card-frontside">
                                 <label for="card-number-0" class="card-number-label">
                                     <h3>Номер карты</h3></label>
                                 <div class="card-numbers">
-                                    <input type="num" id="card-number-0" class="input-card-number" maxlength="4" pattern="[0-9]{4}" required />
-                                    <input type="num" id="card-number-1" class="input-card-number" maxlength="4" pattern="[0-9]{4}" required />
-                                    <input type="num" id="card-number-2" class="input-card-number" maxlength="4" pattern="[0-9]{4}" required />
-                                    <input type="num" id="card-number-3" class="input-card-number" maxlength="4" pattern="[0-9]{4}" required />
+                                    <input type="num" id="card-number-0" class="input-card-number" form="payment-form" maxlength="4" pattern="[0-9]{4}" required />
+                                    <input type="num" id="card-number-1" class="input-card-number" form="payment-form" maxlength="4" pattern="[0-9]{4}" required />
+                                    <input type="num" id="card-number-2" class="input-card-number" form="payment-form" maxlength="4" pattern="[0-9]{4}" required />
+                                    <input type="num" id="card-number-3" class="input-card-number" form="payment-form" maxlength="4" pattern="[0-9]{4}" required />
                                 </div>
                                 <label for="card-date-month" class="card-date-label">
                                     <h3>Срок действия</h3></label>
                                 <div class="select">
-                                    <select id="card-date-month">
+                                    <select id="card-date-month" form="payment-form">
                                         <option value="01">01</option>
                                         <option value="02">02</option>
                                         <option value="03">03</option>
@@ -90,7 +90,7 @@
                                     </select>
                                 </div>
                                 <div class="select">
-                                    <select id="card-date-year">
+                                    <select id="card-date-year" form="payment-form">
                                         <option value="2018">2018</option>
                                         <option value="2019">2019</option>
                                         <option value="2020">2020</option>
@@ -102,7 +102,7 @@
                                     </select>
                                 </div>
                                 <div class="card-holder-name">
-                                    <input id="card-holder" type="text" placeholder="Держатель карты" pattern="^[a-zA-Z\s]+$" required>
+                                    <input id="card-holder" form="payment-form" type="text" placeholder="Держатель карты" pattern="^[a-zA-Z\s]+$" required>
                                 </div>
                             </div>
 <!-- Card holder backside -->
@@ -111,13 +111,13 @@
                                 <div class="card-code">
                                     <label class="code-lable" for="card-cvc-number">
                                         <h3>Код CVV2 / CVC2</h3></label>
-                                    <input type="num" id="card-cvc-number" class="input-card-cvc" maxlength="3" pattern="[0-9]{3}" required />
+                                    <input type="num" form="payment-form" id="card-cvc-number" class="input-card-cvc" maxlength="3" pattern="[0-9]{3}" required />
                                     <div class="question">?</div>
                                 </div>
                             </div>
                         </div>
 <!-- Form action button -->
-                        <button type="submit" class="submit-btn" value="Оплатить">Оплатить</button>
+                        <button type="submit" class="submit-btn" form="payment-form" value="Оплатить">Оплатить</button>
                     </form>
                 </div>
             </div>
