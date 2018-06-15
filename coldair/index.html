@@ -210,7 +210,7 @@
 					</svg>
 				</div>
 				<div class="catalog-name">
-					<a href="#" class="catalog-link">Кондицеонеры на спецтехнику
+					<a href="#" class="catalog-link">Кондиционеры на спецтехнику
 						<br>
 						<span class="catalog-arrow">
 							<svg x="0px" y="0px" viewBox="0 0 81.4 17.5" style="enable-background:new 0 0 81.4 17.5;">
@@ -468,25 +468,25 @@
 				<h1>Заказать звонок</h1>
 			</div>
 		</div>
-		<form action="">
+		<form id="comment-form" action="send.php" method="POST">
 			<div class="row">
 				<div class="col-md-4 form-input-block">
 					<label for="name">Имя</label>
-					<input id="name" type="text">
+					<input id="name" type="text" required>
 				</div>
 				<div class="col-md-4 form-input-block">
 					<label for="phone">Телефон</label>
-					<input id="phone" type="tel">
+					<input id="phone" type="tel" pattern="[0-9]{5,25}" required>
 				</div>
 				<div class="col-md-4 form-input-block">
 					<label for="mail">Email</label>
-					<input id="mail" type="text">
+					<input id="mail" type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required>
 				</div>
 			</div>
 			<div class="row">
 				<div class="col-12 form-input-block textarea-block">
 					<label for="comment">Комментарий</label>
-					<textarea name="comment" id="comment" cols="30" rows="5"></textarea>
+					<textarea name="comment" id="comment" cols="30" rows="5" required></textarea>
 				</div>
 			</div>
 			<div class="row send-row">
