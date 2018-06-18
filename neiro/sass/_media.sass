@@ -1,0 +1,586 @@
+@import "vars"
+
+@media screen and (min-width:0\0)
+    .left-head-discription
+        left: -205px
+    .btn-create-big 
+        a 
+            span
+                margin-top: 30px
+    .question-container
+        width: 300px
+
+/*==========  Desktop First  ==========*/
+
+// ≥1090px
++media-breakpoint-down(lg)
+    section
+        width: 100%
+        overflow: hidden
+    .wrapper
+        width: 100%
+        padding: 0 20px
+        overflow: hidden
+    .nav-wrapper
+        .navigation
+            max-width: 100%
+            padding: 0 20px
+    .team-content
+        width: 100%
+        padding: 0 20px
+    .contacts-content
+        width: 100%
+        padding: 0 20px
+// ≥992px
++media-breakpoint-down(md)
+
+
+    .nav-wrapper                  
+        .btn-create
+            order: 1
+            a
+                span
+                    background: #c70075
+        
+        nav
+            display: none
+
+    .burger
+        display: block
+
+    .head-discription
+        align-items: flex-start
+        flex-direction: column
+        .head-img
+            max-width: 500px
+            position: absolute
+            left: 23%
+            top: 70px
+            .circles
+                position: absolute
+                left: 19%
+                top: -3%
+                width: 330px   
+
+    .fullscreen
+        display: none
+    .smallscreen
+        display: block
+    .left-head-discription
+        margin: 0
+        top: -5%
+        width: 250px
+        div
+            width: 28px
+        span
+            font-size: 7rem
+        p
+            margin: 0
+            font-size: 24px
+            
+    .right-head-discription
+        align-self: flex-end
+        width: 70%
+        display: flex
+        justify-content: space-between
+        margin: 0
+        span
+            font-size: 7rem
+            line-height: 0.7
+        p
+            display: inline-block
+            margin: 0
+            width: 80%
+            font-size: 22px
+            position: relative
+            top: -5px
+            br
+                display: none
+    .questions
+        .question-container:nth-child(4)
+            right: -70px
+
+    .change-pos
+        display: block
+        float: right
+        width: 75%
+    .brain
+        float: left
+        width: 19%
+        margin-top: 0 !important
+    .clearfix
+        display: block
+    .reaction-content-wrapper
+        justify-content: space-around
+        width: 100%
+    .reaction-content
+        justify-content: space-between
+        width: 100%
+        ul
+            margin: 0
+    
+    .technology-content-top
+        .technology-neuro
+            h2
+                font-size: 20px
+
+    .advantage
+        .advantage-content
+            p
+                font-size: 18px
+
+    .contacts
+        div
+            span
+                font-size: 1.2rem
+    .contacts-wrapper
+        .contacts-background
+            position: static
+    .social-wrapper
+        width: 100%
+
+
+// ≥768px
++media-breakpoint-down(sm)
+
+    hr
+        margin-bottom: 15px
+
+    .head-discription
+        height: 70vh
+
+    .left-head-discription
+        width: 140px
+        div
+            width: 10px
+            position: relative
+            left: 6px
+        span
+            font-size: 40px
+            left: 8px
+            position: relative
+        p
+            line-height: 1.17
+            font-size: 14px
+            
+    .right-head-discription
+        justify-content: flex-end
+        span
+            font-size: 40px
+            line-height: 0.7
+        p
+            width: 100%
+            font-size: 14px
+            line-height: 1.36
+            top: -5px
+            .bull
+                display: none
+                
+
+    .head-discription
+        .head-img
+            width: 350px !important
+            position: absolute
+            left: 18%
+            top: calc(100vh-70%)
+            .circles
+                position: absolute
+                left: 19%
+                top: -3%
+                width: 240px !important   
+
+    .separator
+        .question-arrow
+            left: 46.5%
+        .questions-separator
+            width: 47%
+    .questions
+        flex-direction: column
+        justify-content: space-between
+        align-items: flex-end
+        width: 100%
+        margin-bottom: 200px
+        .question-container 
+            position: relative
+            width: 100% !important     
+            &.box
+                order: 1
+                font-family: Montserrat
+                font-size: 1.9rem
+                font-weight: normal
+                line-height: 1.29
+                .question-wrapper
+                    left: 0
+                    width: 90%
+                    justify-content: flex-start
+                    align-items: flex-start
+                    text-align: left
+            &.human
+                order: 2
+                font-family: Montserrat
+                font-size: 1.5rem
+                font-weight: 800
+                line-height: 1.54
+                .question-wrapper
+                    right: 0
+                    width: 70%
+                    justify-content: flex-start
+                    align-items: flex-end
+                    text-align: right
+            &.lightning
+                order: 3
+                font-family: Montserrat
+                font-size: 1.45rem
+                font-weight: 500
+                line-height: 1.5
+                .question-wrapper
+                    left: 0
+                    width: 60%
+                    justify-content: flex-start
+                    align-items: flex-start
+                    text-align: left
+            &.heart
+                order: 4
+                font-family: Montserrat
+                font-size: 1.5rem
+                font-weight: bold
+                line-height: 1.35
+                .question-wrapper
+                    right: 0
+                    width: 60%
+                    justify-content: flex-start
+                    align-items: flex-end
+                    text-align: right
+            &.cube
+                order: 5
+                font-family: Montserrat
+                font-size: 1.4rem
+                font-weight: 500
+                line-height: 1.64
+                .question-wrapper
+                    left: 0
+                    width: 100%
+                    justify-content: flex-start
+                    align-items: flex-start
+                    text-align: left
+        .question-container:nth-child(2)
+            top: 20px
+        .question-container:nth-child(1)
+            top: auto
+        .question-container:nth-child(3)
+            left: 0
+            top: auto
+        .question-container:nth-child(4)
+            right: 20px
+            top: auto
+        .question-container:nth-child(5)
+            left: 30px
+            top: auto
+    .about-service
+        margin-top: 20px
+    .about-discription
+        height: 100%
+        flex-direction: column
+        margin-top: 10px
+        .discription
+            width: 100%
+    .about-service
+        height: auto
+
+    .research-content
+        width: 100%
+        flex-wrap: wrap
+        margin-top: 0
+        .research-discription
+            flex-grow: 1
+            width: 100%
+            margin-bottom: 20px
+            padding-top: 20px
+        .research-lists
+            width: 50%
+
+    .reaction-content-wrapper
+        flex-wrap: wrap
+        .reaction-content
+            width: 100%
+            margin-bottom: 20px
+            &.emotions
+                div
+                    width: 50%
+    .note
+        padding-top: 0
+    
+    .how-work
+        flex-direction: column
+
+    .technology-content-top
+        flex-direction: column
+        width: 100%
+        .technology-discription
+            width: 100%
+        .technology-neuro
+            flex-direction: column
+            width: 100%
+            .neuro-content
+                width: 100%
+                display: flex
+                align-items: flex-end
+                justify-content: space-between
+                h2
+                    width: 92%
+
+    .technology-content-bottom
+        flex-direction: column
+        margin-bottom: 20px
+        div
+            width: 100%
+            margin-top: 20px
+
+
+    .advantage
+        .advantage-content
+            justify-content: flex-start
+    
+    .contacts-wrapper
+        height: auto
+    .contacts
+        flex-wrap: wrap
+        div
+            img
+                display: none
+        .company-adr
+            flex-grow: 1
+            width: 100%
+            margin-top: 10px
+            span
+                display: inline
+                br
+                    display: none
+    .russia
+	    display: inline !important
+
+    form
+        padding-bottom: 70px
+        margin-top: 20px
+    .form-wrapper
+        flex-direction: column
+        height: auto
+        .contacts-form
+            width: 100%
+            height: auto
+        .text-form
+            width: 100%
+            height: 164px
+    .input-block
+        width: 100%
+        height: 62px
+        margin-top: 20px
+    #contact-btn
+        margin-top: 20px
+
+
+// ≥576px
++media-breakpoint-down(xs)
+
+    h1
+        text-align: left
+        font-size: 40px
+        line-height: 1.1
+    h2
+        font-size: 22px
+        line-height: 1.23
+    p
+        font-size: 14px
+        line-height: 1.43
+    ul
+        font-size: 14px
+        line-height: 1.93 
+
+    .mobile-menu
+        top: 60px
+
+    header
+        padding-top: 100px
+        margin-left: 0
+
+    .nav-wrapper
+        height: 60px
+        background-color: #000947
+        .navigation
+            height: 60px
+            .logo
+                a
+                    font-size: 19px
+        .btn-create
+            width: 154px
+            height: 24px
+            a
+                font-size: 12px
+                line-height: 2
+
+    .head-discription
+        .head-img
+            left: 0
+    .right-head-discription
+        width: 88%
+    .separator
+        .question-arrow
+            width: 40px
+            left: 45%
+        .questions-separator
+            &.rigth
+                right: -20px
+
+    .questions-content
+        margin-top: 10px
+    .question-circle
+        width: 60px
+        height: 60px
+        font-size: 50px
+    .questions
+        .question-container
+            &.box
+                p
+                    font-size: 20px !important
+                    line-height: 1.25
+            &.human
+                p
+                    font-size: 18px !important
+                    line-height: 1.39
+            &.lightning
+                .question-wrapper
+                    top: -20px
+                p
+                    font-size: 18px !important
+                    line-height: 1.39
+            &.heart
+                p
+                    font-size: 18px !important
+                    line-height: 1.39
+            &.cube
+                p
+                    font-size: 18px !important
+                    line-height: 1.39
+    .btn-create-big
+        width: 335px
+        height: 80px
+        a
+            span
+                margin-left: 17%
+    .about-discription
+        .discription:first-child
+            font-size: 17px
+            line-height: 1.41
+    .research-content
+        .research-discription
+            p
+                font-size: 17px
+                line-height: 1.41
+            p:last-child
+                font-size: 14px
+                line-height: 1.43
+
+    .change-pos
+        font-size: 17px
+        line-height: 1.41
+
+    #work-anchor
+        margin-top: 40px !important
+
+    .technology-content-top
+        .technology-discription
+            font-size: 17px
+            line-height: 1.41
+            padding: 0
+    .technology-content-bottom
+        margin-bottom: 40px
+    .advantage
+        flex-direction: column
+        .advantage-content
+            width: 100%
+            height: auto
+            flex-direction: row
+            justify-content: flex-start
+            p
+                text-align: left
+                margin-left: 16px
+                line-height: 1.38
+    #team-anchor
+        padding-bottom: 20px
+    .team
+        flex-direction: column
+        .team-member
+            width: 100%
+            position: relative
+            margin-top: 40px
+            img
+                position: absolute
+                top: -30px
+                width: 70px
+            .name, .member-function
+                font-size: 16px
+                line-height: 1.31 
+                position: relative
+                left: 80px               
+            .function-discription
+                font-size: 14px
+                line-height: 1.29
+                margin-top: 10px
+    .contacts-background
+        margin-bottom: 20px
+    .contacts
+        margin-top: 20px
+        div
+            width: 50%
+            span
+                font-size: 16px
+                line-height: 2.19 
+
+    .shapes-background-top
+        margin-top: 20px !important
+
+
+    .social-wrapper
+        .social
+            a
+                span
+                    display: none
+
+    .contacts
+        div
+            span
+                margin: 0
+        .company-adr
+            margin: 0
+            span
+                margin: 0
+    form
+        margin-top: 20px
+    .ur-info
+        display: block
+        width: 100%
+        text-align: center
+        font-size: 12px
+        line-height: 2.92
+        color: #a8a8a8
+    .info-discription
+        display: block
+        width: 100%
+        text-align: left
+        font-size: 10px
+        line-height: 1.4
+        color: #a8a8a8
+
+/*==========  Mobile First  ==========*/
+
+// ≤576px
++media-breakpoint-up(sm)
+
+// ≤768px
++media-breakpoint-up(md)
+
+// ≤992px
++media-breakpoint-up(lg)
+
+// ≤1200px
++media-breakpoint-up(xl)
