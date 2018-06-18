@@ -132,6 +132,7 @@ $(function(){
 });
 
 
+//function for put header img on center 
 
 centerElem();
 function centerElem(){
@@ -159,4 +160,11 @@ window.onresize = function(){
 	centerElem();
 };
 
-
+// Scroll header block function on press separator arrow
+$(function(){
+	$('.question-arrow').on('click', function(){
+		$('html, body').animate({
+			scrollTop: $('.question-arrow').offset().top
+		}, 700);
+	});
+});
