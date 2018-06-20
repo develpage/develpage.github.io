@@ -3,12 +3,6 @@
 @import "libs"
 
 
-@keyframes rotate
-	0%
-		transform: rotate(0)
-	100%
-		transform: rotate(360deg)
-
 
 ::placeholder
 	color: #666
@@ -238,10 +232,12 @@ circle, path
 				opacity: 0
 
 .menu-btn-hover
-	width: 100%
+	width: 200px
 	height: auto
 	position: absolute
 	top: 0
+	opacity: 0
+	transition: 0.2s ease
 		
 .menu-bottom-line-wrapper
 	width: 100%
@@ -441,11 +437,17 @@ header
 			top: -24px
 			left: 38.5%
 			width: 50%
-			animation: rotate 60s linear infinite
+			animation: rotate 120s linear infinite
+
+@keyframes rotate
+	0%
+		transform: rotate(0)
+	100%
+		transform: rotate(360deg)
 
 .bg-flick
 	opacity: 1
-	animation: flick 3s linear infinite
+	animation: flick 6s linear infinite
 
 @keyframes flick
 	0%
@@ -700,6 +702,14 @@ header
 			left: 0
 			right: 0
 			bottom: 0
+		.about-btn-hover
+			opacity: 0
+			width: 430px
+			height: 90px
+			position: absolute
+			top: -4px
+			left: -24px
+			transition: 0.2s ease
 
 // About Service section
 
@@ -793,8 +803,11 @@ header
 		border-radius: 100%
 		background-color: #d0021b
 		position: relative
-		top: -8px
+		top: 16px
 		left: 0
+	p
+		position: relative
+		left: 14px
 
 
 // How its Work Wrapper  
