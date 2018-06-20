@@ -35,32 +35,36 @@ function scrollBar() {
 // Buttons effects
 
 $(function () {
-
-
-	if ($(window).width() > 576) {
 		$('.btn-create').mouseenter(function () {
+			if ($(window).width() > 576) {
+				console.log($(window).width());
 			$('.menu-btn-hover').css('opacity', '1');
+			}
 		});
 		$('.btn-create').mouseleave(function () {
+			if ($(window).width() > 576) {				
 			$('.menu-btn-hover').css('opacity', '0');
-		});
-	}
+			}
+		});	
 });
-
 
 $(function () {
-
-	if ($(window).width() > 576) {
 	$('.btn-create-big').mouseenter(function () {
+		if ($(window).width() > 576) {
 		$('.btn-big').fadeOut();
 		$('.about-btn-hover').css('opacity', '1');
+		}
 	});
 	$('.btn-create-big').mouseleave(function () {
+		if ($(window).width() > 576) {
 		$('.btn-big').fadeIn();
 		$('.about-btn-hover').css('opacity', '0');
+		}
 	});
-	}
-});
+}); 
+
+
+
 
 // Label ebbects for inputs
 
@@ -157,6 +161,7 @@ $(function () {
 
 $(document).ready(function () {
 
+
 	centerElem();
 
 	function centerElem() {
@@ -180,9 +185,9 @@ $(document).ready(function () {
 
 	};
 
-	window.onresize = function () {
+	$(window).resize (function () {
 		centerElem();
-	};
+	});
 
 
 });
