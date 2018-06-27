@@ -10,7 +10,7 @@
     <title>Document</title>
 </head>
 
-<body id="goFS" onLoad="setTimeout(function() {window.scrollTo(0, 1)}, 100);" style="height: 150vh;">
+<body id="goFS" style="height: 150vh;">
     <div id="either-gif-or-video">
         <video width="400px" height="auto" src="video/FILE_5b1badf3a68406.50442175.mp4" preload="metadata" controls muted autoplay
             loop webkit-playsinline playsinline></video>
@@ -18,17 +18,7 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script>
-        function hideAddressBar() {
-            if (document.documentElement.scrollHeight < window.outerHeight / window.devicePixelRatio)
-                document.documentElement.style.height = (window.outerHeight / window.devicePixelRatio) + 'px';
-            setTimeout(window.scrollTo(1, 1), 10);
-        }
-        window.addEventListener("load", function () {
-            hideAddressBar();
-        });
-        window.addEventListener("orientationchange", function () {
-            hideAddressBar();
-        });
+        window.addEventListener("load", function() { window. scrollTo(0, 0); });
     </script>
     <!--video loop autoplay controls="true" width='100%' height='100%' src='//some_video.mp4' type='video/mp4'></video-->
 </body>
