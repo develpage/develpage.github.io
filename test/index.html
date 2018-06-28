@@ -31,8 +31,10 @@
             document.addEventListener('load', () => {
                 if (screenfull.enabled) {
                     screenfull.request();
+                    console.log('yes');
+
                 } else {
-                    // Ignore or do something else
+                    console.log('no');
                 }
             });
        
