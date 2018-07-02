@@ -1,10 +1,9 @@
 var noSleep = new NoSleep();
 var wakeLockEnabled = false;
 
-document.body.addEventListener('touchend', function() {
+document.body.addEventListener('click', function() {
 
   if (!wakeLockEnabled) {
-    console.log('sddsad');
     noSleep.enable();
     wakeLockEnabled = true;
     document.body.style.backgroundColor = "green";
