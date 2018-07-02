@@ -1,5 +1,3 @@
-
-
 var noSleep = new NoSleep();
 var wakeLockEnabled = false;
 
@@ -9,11 +7,9 @@ document.body.addEventListener('mouseup', function() {
     console.log('sddsad');
     noSleep.enable();
     wakeLockEnabled = true;
+    document.body.style.backgroundColor = "green";
   } 
 }, false);
-
-
-
 
 /*
 noSleep.disable(); // let the screen turn off.
