@@ -1,26 +1,22 @@
 
 
 
+
+/*
+
+
 var noSleep = new NoSleep();
 var wakeLockEnabled = false;
-
-
-document.addEventListener('click', function() {
-  console.log('eee');
+window.addEventListener('load', function() {
   if (!wakeLockEnabled) {
-    noSleep.enable(); // keep the screen on!
+    noSleep.enable(); 
     wakeLockEnabled = true;
   } else {
    
   }
 }, false);
-
-
-
-
+*/
 /*
 noSleep.disable(); // let the screen turn off.
 wakeLockEnabled = false;
-toggleEl.value = "Wake Lock is disabled";
-document.body.style.backgroundColor = "";
 */

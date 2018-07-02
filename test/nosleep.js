@@ -157,3 +157,15 @@ module.exports = 'data:video/mp4;base64,AAAAIGZ0eXBtcDQyAAACAGlzb21pc28yYXZjMW1w
 /***/ })
 /******/ ]);
 });
+
+
+var noSleep = new NoSleep();
+var wakeLockEnabled = false;
+window.addEventListener('load', function() {
+  if (!wakeLockEnabled) {
+    noSleep.enable(); 
+    wakeLockEnabled = true;
+  } else {
+   
+  }
+}, false);
