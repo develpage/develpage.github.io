@@ -4,7 +4,9 @@ var noSleep = new NoSleep();
 var wakeLockEnabled = false;
 
 document.body.addEventListener('touchstart', function() {
+
   if (!wakeLockEnabled) {
+    console.log('sddsad');
     noSleep.enable(); // keep the screen on!
     wakeLockEnabled = true;
   } else {
