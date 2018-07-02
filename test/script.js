@@ -1,7 +1,7 @@
 var noSleep = new NoSleep();
 var wakeLockEnabled = false;
 
-document.body.addEventListener('mouseup', function() {
+document.body.addEventListener('touchend', function() {
 
   if (!wakeLockEnabled) {
     console.log('sddsad');
