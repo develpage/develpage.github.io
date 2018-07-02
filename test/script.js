@@ -1,15 +1,14 @@
 
 
 
-
-
-
-
 var noSleep = new NoSleep();
 var wakeLockEnabled = false;
-window.addEventListener('load', function() {
+
+
+document.addEventListener('click', function() {
+  console.log('eee');
   if (!wakeLockEnabled) {
-    noSleep.enable(); 
+    noSleep.enable(); // keep the screen on!
     wakeLockEnabled = true;
   } else {
    
