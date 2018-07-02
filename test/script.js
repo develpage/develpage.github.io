@@ -2,7 +2,7 @@
 
 
 
-/*
+
 
 
 var noSleep = new NoSleep();
@@ -15,7 +15,7 @@ window.addEventListener('load', function() {
    
   }
 }, false);
-*/
+
 /*
 noSleep.disable(); // let the screen turn off.
 wakeLockEnabled = false;
