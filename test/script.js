@@ -3,15 +3,13 @@
 var noSleep = new NoSleep();
 var wakeLockEnabled = false;
 
-document.body.addEventListener('touchstart', function() {
+document.body.addEventListener('touchmove', function() {
 
   if (!wakeLockEnabled) {
     console.log('sddsad');
-    noSleep.enable(); // keep the screen on!
+    noSleep.enable();
     wakeLockEnabled = true;
-  } else {
-   
-  }
+  } 
 }, false);
 
 
