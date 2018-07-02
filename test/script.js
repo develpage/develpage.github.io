@@ -1,12 +1,10 @@
+/*
 var noSleep = new NoSleep();
 var wakeLockEnabled = false;
-
 document.body.addEventListener('click', function() {
-
   if (!wakeLockEnabled) {
     noSleep.enable();
     wakeLockEnabled = true;
-    document.body.style.backgroundColor = "green";
   } 
 }, false);
 
