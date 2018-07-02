@@ -2,9 +2,8 @@
 
 var noSleep = new NoSleep();
 var wakeLockEnabled = false;
-var toggleEl = document.querySelector("div");
 
-toggleEl.addEventListener('click', function() {
+document.body.addEventListener('touchstart', function() {
   if (!wakeLockEnabled) {
     noSleep.enable(); // keep the screen on!
     wakeLockEnabled = true;
