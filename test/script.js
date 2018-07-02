@@ -1,4 +1,7 @@
 
+
+document.onload = function (){
+
 var noSleep = new NoSleep();
 
 function enableNoSleep() {
@@ -9,3 +12,5 @@ function enableNoSleep() {
 // Enable wake lock.
 // (must be wrapped in a user input event handler e.g. a mouse or touch handler)
 document.addEventListener('touchstart', enableNoSleep, false);
+
+};
